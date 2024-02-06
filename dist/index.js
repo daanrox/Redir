@@ -9,8 +9,7 @@ const app = (0, express_1.default)();
 const port = 3000;
 app.use((0, cors_1.default)());
 app.get('/script', (req, res) => {
-    // const dynamicScript = `<script>window.location.href = "https://subwayaposta.shop/cadastrar";</script>`;
-    const dynamicScript = `<script>console.log('cadastrar');</script>`;
+    const dynamicScript = `<script>localStorage.setItem('API', 'Redir by @Daanrox');</script>`;
     res.json({ script: dynamicScript });
 });
 app.listen(port, () => {
